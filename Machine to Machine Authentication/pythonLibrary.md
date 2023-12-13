@@ -3,7 +3,7 @@
 `m2m-auth` is a comprehensive library used to authenticate calls between internal services and API’s.
 
 > [!IMPORTANT]
-> If you need to use M2M authentication with an existing Python2 service, please use this library instead: (*link*)
+> If you need to use M2M authentication with an existing Python2 service, please use this library instead *(link)*
 
 ## Installation
 
@@ -28,12 +28,6 @@ Begin by importing the m2m requests module into your project.
 from m2m_client.request import M2MRequest
 ```
 
-> [!NOTE]
-> When using any of the request methods, you must supply your `client_id`, `client_secret`, and `audience` as either arguments or as environment variables. These are the values that you obtained when you created an Auth0 Client for your service *(link to external doc)*.
-
-> [!WARNING]
-> All `client_secret` values must be stored securely (NOT checked into version control). We encourage storing them in a solution such as AWS Secrets Manager via Terraform or as Gitlab CI/CD variables.
-
 ### Outgoing Requests
 
 The request types available through m2m-auth are the traditional RESTful HTTP request types:
@@ -47,6 +41,12 @@ The request types available through m2m-auth are the traditional RESTful HTTP re
 `patch(url, data=None, client_id=None, client_secret=None, audience=None, **kwargs)`
 
 `delete(url, client_id=None, client_secret=None, audience=None, **kwargs)`
+
+> [!NOTE]
+> When using any of the request methods, you must supply your `client_id`, `client_secret`, and `audience` as either arguments or as environment variables. These are the values that you obtained when you created an Auth0 Client for your service *(link to external doc)*.
+
+> [!WARNING]
+> All `client_secret` values must be stored securely (NOT checked into version control). We encourage storing them in a solution such as AWS Secrets Manager via Terraform or as Gitlab CI/CD variables.
 
 
 | Arguments | Description | Example

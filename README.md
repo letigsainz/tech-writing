@@ -6,7 +6,7 @@ This repo contains some of my technical writing work...
 * [FoodLink User Guide](FoodLink%20User%20Guide/USERGUIDE.md)
     * A guide intendended for new users of the FoodLink web application.
 
-* [Machine to Machine Authentication Reference Manual](Machine%20to%20Machine%20Authentication/README.md)
+* [Machine to Machine Authentication Reference Manual](Machine%20to%20Machine%20Authentication/pythonLibrary.md)
     * A technical document created to provide guidance to developers using a python library for machine to machine authentication.
 
 * [Service Discovery Reference Manual](Service%20Discovery/README.md)

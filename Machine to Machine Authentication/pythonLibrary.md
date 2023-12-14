@@ -35,6 +35,8 @@ The request types available through m2m-auth are the traditional RESTful HTTP re
 > [!NOTE]
 > When using any of the request methods, you must supply your `client_id`, `client_secret`, and `audience` as either arguments or as environment variables. These are the values that you obtained when you created an Auth0 Client for your service *(link to external doc)*.
 
+#### Requests:
+
 `get(url, params=None, client_id=None, client_secret=None, audience=None, **kwargs)`
 
 `post(url, data=None, json=None, client_id=None, client_secret=None, audience=None, **kwargs)`

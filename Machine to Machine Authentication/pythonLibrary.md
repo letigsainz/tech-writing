@@ -51,7 +51,7 @@ The request types available through m2m-auth are the traditional RESTful HTTP re
 > All `client_secret` values must be stored securely (NOT checked into version control). We encourage storing them in a solution such as AWS Secrets Manager via Terraform or as Gitlab CI/CD variables.
 
 
-| Arguments | Description | Example
+| Parameters | Description | Example
 | --- | --- | --- |
 | `url` | The url of the service you want to communicate with. | url1.revup.com |
 | `params` | Additional data you want to send in the URL's query string. | `{'key':'value'}` |

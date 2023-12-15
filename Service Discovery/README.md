@@ -39,8 +39,7 @@ variable "consul_server_leader_address" {
 }
 ```
 
-You will need the addresses/url's for consul servers in dev, qa, and prod. You can find these [here]().
-Replace `<replace_me>` with the url for dev consul.
+Replace `<replace_me>` with the url for dev consul. You can find the urls for dev, qa, and prod [here]().
 
 ## ECS Services
 

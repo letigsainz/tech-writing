@@ -1,6 +1,6 @@
 # Support/Fulfillment: Edit a new instance's first employee
 
-When Auth0 is the source of truth, i.e. the Auth0 Feature Flag is switched on, the first employee on a customer instance will be created in both Management Console (MC) and Auth0. However, these entities will not be linked until the employee logs into the MC for the first time. 
+When Auth0 is the source of truth, i.e. the Auth0 Feature Flag is switched on, the first employee on a customer instance will be created in both Management Console (MC) and Auth0. However, these entities will not be linked until the employee logs into MC for the first time. 
 
 This can be observed when navigating to said employee's detail page in MC. The Auth0 Id form field will be empty.
 

@@ -6,9 +6,9 @@ FoodLink is a food donation platform that aims to bring together local restauran
 
 ### Sign up
 
-Create a new account by typing in your email address, password, and address.
+Create a new account by typing in your email address, password, and home/office address.
 
-If you are creating an account as a restaurant employee, select the Restaurant option. Similarly, if you are employed by a charity organization, select Charity.
+If you are creating an account as a restaurant employee, select the **Restaurant** option. Similarly, if you are employed by a charity organization, select **Charity**.
 
 <img src="images/image4.png" width="50%" height="50%">
 
@@ -20,21 +20,23 @@ Once the sign up form has been submitted, you’ll receive a confirmation email 
 
 ## Logging in
 
-Use your email address and password to sign in. As a reminder, you must have confirmed your email address in order to log in.
+Use your email address and password to sign in. 
+
+As a reminder, you must have confirmed your email address in order to log in.
 
 <img src="images/image5.png" width="50%" height="50%">
 
 ## Edit your Profile
 
-Once you’ve logged into the system, if you want to edit personal information such as your name, address, or phone number, you can do so in the Profile tab. 
+Once you’ve logged into the system, if you want to edit personal information such as your name, address, or phone number, you can do so in the **Profile** tab. 
 
-Hover over your name in the navigation bar. A dropdown menu will appear, where you can select “Profile”. Here you’ll be able to update those personal details.
+Hover over your name in the navigation bar. A dropdown menu will appear, where you can select “Profile”. Here you’ll be able to update any personal details.
 
 <img src="images/image10.png" width="50%" height="50%">
 
 ## Edit Account Information
 
-If you want to change your password or cancel your account, you’ll want to head over to the Account tab.
+If you want to change your password or cancel your account, head over to the **Account** tab.
 
 Hover over your name in the navigation bar. A dropdown menu will appear, where you can select “Account”. 
 
@@ -42,21 +44,21 @@ Hover over your name in the navigation bar. A dropdown menu will appear, where y
 
 ## Manage Food Donations
 
-Select “food donations” (in the navigation bar) to manage the food donations linked to your organization.
+Select “food donations” in the navigation bar, to manage the food donations linked to your organization.
 
 ### For Restaurants
 
-When a charity accepts one of your available donations, you will be notified via email. The donation will be marked as pending for both parties, until completed.
+When a charity accepts one of your available donations, you will be notified via email. The donation will be marked as pending for both parties, until it is completed.
 
 #### View pending food donations
 
-On this screen, you can view pending food donations, create new donations, and export past donations to a csv file for tax purposes.
+On the **food donations** page, you can view pending food donations, create new donations, and export past donations to a csv file for tax purposes.
 
 <img src="images/image2a.png" width="50%" height="50%">
 
 #### Create new food donation
 
-To create a new donation, select “new food donation” and fill out form details to be displayed to charities.
+To create a new donation, select “new food donation” and fill out the form details that should be displayed to charities.
 
 <img src="images/image8.png" width="50%" height="50%">
 
@@ -68,7 +70,7 @@ Select “export donation history” to download a csv file containing all of yo
 
 #### View available food donations
 
-On the Food Donations page you can view all available restaurant donations in your area. When you’ve found one that interests you, select “request” on the far right column of the corresponding entry. 
+On the **food donations** page, you can view all available restaurant donations in your area. When you’ve found one that interests you, select “request” on the far right column of the corresponding entry. 
 
 > [!TIP]
 > You may only request one donation at a time.
@@ -80,14 +82,14 @@ On the Food Donations page you can view all available restaurant donations in yo
 
 #### Marking an order as Complete
 
-When your charity receives a donation successfully, mark the order as complete. You can find the Complete button on the far right column for the given entry.
+When your charity receives a donation successfully, mark the order as complete. You can find the "Complete" button on the far right column for the given entry.
 
 <img src="images/image9.png" width="50%" height="50%">
 
 #### Canceling an order 
 
 In the event you want to cancel, you must do so 48 hours before scheduled delivery time. 
-The cancel button will disappear from the entry after the time window has passed.
+The "cancel" button will disappear from the page after the time window has passed.
 
 ## Logging Out
 

@@ -9,3 +9,7 @@ I wrote this guide in order to help support and fulfillment staff navigate this 
 ## Impact
 
 Support staff were able to better serve customer needs.
+
+## Link to document
+
+[Support Guide](guide.md)

@@ -37,7 +37,7 @@ from m2m_client.request import M2MRequest
 The request types available through m2m-auth are the traditional RESTful HTTP request types.
 
 > [!NOTE]
-> When using any of the request methods, you must supply your `client_id`, `client_secret`, and `audience` as either arguments or as environment variables. These are the values that you obtained when you created an Auth0 Client for your service [topsecretlink]().
+> When using any of the request methods, you must supply your `client_id`, `client_secret`, and `audience` as either arguments or as environment variables. These are the values that you obtained when you [created an Auth0 Client]() for your service.
 
 #### Requests:
 

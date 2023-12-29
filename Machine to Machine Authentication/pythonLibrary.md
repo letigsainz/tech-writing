@@ -1,9 +1,13 @@
 # Python M2M Library
 
-`m2m-auth` is a comprehensive library used to authenticate calls between internal services and API’s.
+## Overview
+
+Machine to machine authentication allows services to communicate with one another in a secure way. In the same way that a system should determine the authenticity of a user before allowing access, it must also authorize the client. In this case, the client (or clients) refers to our services. 
+
+`m2m-auth` is a comprehensive library used to authenticate calls between internal services and API’s, creating a secure and trusted network of clients.
 
 > [!IMPORTANT]
-> If you need to use M2M authentication with an existing Python2 service, please use this library instead *(link)*
+> If you need to use M2M authentication with an existing Python2 service, please use [this]() library instead.
 
 ## Installation
 
@@ -33,7 +37,7 @@ from m2m_client.request import M2MRequest
 The request types available through m2m-auth are the traditional RESTful HTTP request types.
 
 > [!NOTE]
-> When using any of the request methods, you must supply your `client_id`, `client_secret`, and `audience` as either arguments or as environment variables. These are the values that you obtained when you created an Auth0 Client for your service *(link to external doc)*.
+> When using any of the request methods, you must supply your `client_id`, `client_secret`, and `audience` as either arguments or as environment variables. These are the values that you obtained when you created an Auth0 Client for your service [topsecretlink]().
 
 #### Requests:
 
@@ -80,6 +84,8 @@ def hello():
 	return ‘Hello, World!’
 ```
 
+The `authenticate` decorator will work behind the scenes to validate that the incoming client credentials are authorized to access your audience in the given domain.
+
 ### Errors and Exceptions
 
 * `NullClientIdError` is raised if the client_id is not supplied.
@@ -88,3 +94,5 @@ def hello():
 
 * `Auth0RateLimitReachedException` is raised if the Auth0 rate limit is reached.
 * `AuthenticationError` is raised for any other authentication error.
+
+For additional information on error handling, see [here]().

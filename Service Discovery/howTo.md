@@ -4,14 +4,14 @@
 
 Consul is a service discovery tool that allows services to discover and communicate with each other automatically.
 
-Services deployed as ECS instances are automagically added to Consul’s catalog of existing services. When an ECS instance spins up, a Registrator and Consul Agent will be created within the cluster, ensuring that there is always one Registrator and one Agent per ECS instance.
+Services deployed as ECS instances are immediately added to Consul’s catalog of existing services. When an ECS instance spins up, a Registrator and Consul Agent will be created within the cluster, ensuring that there is always one Registrator and one Agent per ECS instance.
 
 The Registrator monitors the Docker daemon for container stop and start events and handles service registration with Consul, using the container names and exposed ports as the service information (which you will explicitly provide, as shown below).
 
-Lambdas, on the other hand, will be “manually” added to Consul’s registry.
+Lambdas, on the other hand, will be manually added to Consul’s registry.
 
 > [!IMPORTANT]
-> At this time, service discovery is only available for ***internal*** services.
+> At this time, service discovery is only available for *internal* services.
 
 ## Getting Started
 
@@ -117,7 +117,7 @@ resource "consul_service" "lambda-test" {
 ```
 
 > [!IMPORTANT]
-> Make sure to keep the `node`, `tags`, and `check` exactly as shown in the example above, in order for your lambda to be successfuly registered.
+> Make sure to define `node`, `tags`, and `check` exactly as shown in the example above, or your lambda will fail to register.
 
 ## Verify that your registration was successful
 

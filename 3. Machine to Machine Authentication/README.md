@@ -10,6 +10,7 @@ This document served as an informative reference guide for developers using mach
 
 ## Link to document
 
-**Note**: Due to proprietary content, all external links have been modified to go nowhere.
+> [!NOTE]
+> Due to proprietary content, all external links have been modified to go nowhere.
 
 [Python M2M Library](pythonLibrary.md)

@@ -12,4 +12,6 @@ As a result, developers could spend their time more productively on other tasks.
 
 ## Link to document
 
+**Note**: Due to proprietary content, all external links have been modified to go nowhere.
+
 [Service Discovery: How-To](howTo.md)

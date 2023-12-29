@@ -2,14 +2,16 @@
 
 ## Overview
 
-Services deployed as ECS instances are automagically added to Consul’s catalog of existing services. When an ECS instance spins up, a new Registrator and Consul Agent will be created within the cluster, ensuring that there is always one Registrator and one Agent per ECS instance.
+Consul is a service discovery tool that allows services to discover and communicate with each other automatically.
 
-The Registrator monitors the Docker daemon for container stop and start events and handles service registration with Consul, using the container names and exposed ports as the service information (which you will explicitly provide).
+Services deployed as ECS instances are automagically added to Consul’s catalog of existing services. When an ECS instance spins up, a Registrator and Consul Agent will be created within the cluster, ensuring that there is always one Registrator and one Agent per ECS instance.
 
-Lambdas need to be “manually” added to Consul’s registry, as you'll see in this guide.
+The Registrator monitors the Docker daemon for container stop and start events and handles service registration with Consul, using the container names and exposed ports as the service information (which you will explicitly provide, as shown below).
+
+Lambdas, on the other hand, will be “manually” added to Consul’s registry.
 
 > [!IMPORTANT]
-> At this time, service discovery is only available for internal services.
+> At this time, service discovery is only available for ***internal*** services.
 
 ## Getting Started
 
@@ -43,7 +45,7 @@ Replace `<replace_me>` with the url for dev consul. You can find the urls for de
 
 ## ECS Services
 
-In order to register your ECS service with Consul, you'll add a few environment variables to your ECS task definition.
+In order to register your ECS service with Consul, you'll add the following environment variables to your ECS task definition.
 
 * Your service's name.
 * Service tags.
@@ -74,7 +76,7 @@ data "template_file" "your_service_task_definitions" {
 
 All lambda services should be registered to the existing Lambda Node in Consul. 
 
-To register your lambda, you will need to:
+To do so, you will need to:
 
 * retrieve the `consul-client` remote state.
 * define the lambda node address, your service tags, and health check within a `consul_service` resource.
@@ -115,13 +117,18 @@ resource "consul_service" "lambda-test" {
 ```
 
 > [!IMPORTANT]
-> Make sure to keep the `node`, `tags`, and `check` exactly as shown in the example above, in order for your lambda to get successfuly registered.
+> Make sure to keep the `node`, `tags`, and `check` exactly as shown in the example above, in order for your lambda to be successfuly registered.
 
 ## Verify that your registration was successful
 
 Make a request to the Consul server for your service:
 
 `https://discovery.dev.revup.io/<your_service_name>/<env>/<endpoint>`
+
+You must include `env` in the url path as seen above. This will take on the value dev, qa, or prod.
+
+> [!TIP]
+> An easy way to verify your service's registration is to make a request to a health check endpoint that simply returns a 200 OK JSON response and success message.
 
 ## Load Balancing
 
@@ -131,4 +138,4 @@ For example, if there are two instances of a service up and running, Consul will
 
 ## Nice to have
 
-If possible, please set a `User-Agent` header for your service's name in your requests. This will allow for more comprehensive logging.
+If possible, please set a `User-Agent` header for your service's name in your requests. This will allow for more comprehensive logging in the future.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Machine to machine authentication allows services to communicate with one another in a secure way. In the same way that a system should determine the authenticity of a user before allowing access, it must also authorize the client. In this case, the client (or clients) refers to our services. 
+Machine to machine (M2M) authentication allows services to communicate with one another in a secure way. In the same way that a system should determine the authenticity of a user before allowing access, it must also authorize the client. In this case, the client (or clients) refers to our services. 
 
 `m2m-auth` is a comprehensive library used to authenticate calls between internal services and API’s, creating a secure and trusted network of clients.
 

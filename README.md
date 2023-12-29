@@ -15,5 +15,3 @@ This repo contains some of my technical writing work...
 * [Support and Fulfillment Guide](Support%20and%20Fulfillment%20Walkthrough/README.md)
     * A user guide for support and fulfillment staff, guiding them through performing a specific action within a web application. 
 
-* [Terraform Best Practices](Terraform%20Best%20Practices/README.md)
-    * A document listing a few best practices for my team to keep in mind when using Terraform to manage infrastrucure.

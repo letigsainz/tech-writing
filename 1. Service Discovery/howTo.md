@@ -85,9 +85,9 @@ To do so, you will need to:
 data "terraform_remote_state" "consul-client" {
     backend = "s3"
     config  = {
-        bucket  = "revup-s3-use1-ss-terraform-{{ TF_VAR_env }}-infra"
+        bucket  = "rev-s3-use1-ss-terraform-{{ TF_VAR_env }}-infra"
         key     = "{{ TF_VAR_env }}/{{ TF_VAR_region_short }}/consul-client/{{ TF_VAR_env }}.tfstate"
-        profile = "revup ss"
+        profile = "rev ss"
         region  = "us-east-1"
     }
 }
@@ -123,7 +123,7 @@ resource "consul_service" "lambda-test" {
 
 Make a request to the Consul server for your service:
 
-`https://discovery.dev.revup.io/<your_service_name>/<env>/<endpoint>`
+`https://discovery.dev.rev.io/<your_service_name>/<env>/<endpoint>`
 
 You must include `env` in the url path as seen above. This will take on the value dev, qa, or prod.
 
@@ -139,3 +139,7 @@ For example, if there are two instances of a service up and running, Consul will
 ## Nice to have
 
 If possible, please set a `User-Agent` header for your service's name in your requests. This will allow for more comprehensive logging in the future.
+
+## Troubleshooting
+
+If you run into any issues or have any questions, check out our [troubleshooting]() doc. If you're still having a hard time, feel free to reach out in the `#eng-consul` slack channel!

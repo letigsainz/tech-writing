@@ -2,7 +2,7 @@
 
 ## Context
 
-During my time on the developer productivity team, I helped create a python3 library to handle machine to machine authentication for internal services.
+During my time on the developer productivity team, I helped create a Python 3 library to handle machine to machine authentication for internal services.
 
 ## Impact
 

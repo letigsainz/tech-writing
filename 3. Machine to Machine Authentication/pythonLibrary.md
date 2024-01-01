@@ -71,6 +71,7 @@ The client id and secret are the credentials you obtained when [creating an Auth
 | `client_secret` | Your application's client secret. | ****** |
 | `audience` | The unique identifier for the target API you want to access. | newaudience.rev.com |
 
+#### Example request
 
 Here's a basic GET request:
 

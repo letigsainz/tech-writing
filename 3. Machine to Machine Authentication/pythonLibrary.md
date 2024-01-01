@@ -89,7 +89,7 @@ For a list of library errors and exceptions, see the **Errors and Exceptions** s
 The content of the response object will vary depending on the specific service you are requesting from. As such, each service may present additional error responses.
 
 
-##### Rate Limiting
+#### Rate Limiting
 
 In the event that your service reaches Auth0's rate limit, the M2M auth library will handle the error itself, using retries and exponential backoff. If all fails, the library will throw an Auth0RateLimitReachedException, with status code 429.
 

@@ -8,14 +8,16 @@ Services deployed as ECS instances are immediately added to Consul’s catalog o
 
 The Registrator monitors the Docker daemon for container stop and start events and handles service registration with Consul, using the container names and exposed ports as the service information (which you will explicitly provide, as shown below).
 
-Lambdas, on the other hand, will be manually added to Consul’s registry.
+Lambdas, on the other hand, will be manually added to Consul’s registry, as seen below.
+
+Fabio is a load balancer and reverse proxy that configures itself with data from Consul. It does so by listening for new Consul registrations and editing its routing table to maintain parity. Fabio handles request distribution when a given service is comprised of more than one instance.
 
 > [!IMPORTANT]
 > At this time, service discovery is only available for *internal* services.
 
 ## Getting Started
 
-Declare the consul provider in your `providers.tf` file.
+Declare the consul provider in your Terraform providers file.
 
 ```
 provider "aws" {
@@ -45,7 +47,9 @@ Replace `<replace_me>` with the url for dev consul. You can find the urls for de
 
 ## ECS Services
 
-In order to register your ECS service with Consul, you'll add the following environment variables to your ECS task definition.
+As mentioned above, ECS services are automatically added to Consul's registry as they spin up. However, there are a few attributes that Fabio requires in order to add your service to its routing table.
+
+In order for your service to successfuly register to both Consul and Fabio, you must add the following environment variables to your ECS task definition.
 
 * Your service's name.
 * Service tags.
@@ -74,9 +78,9 @@ data "template_file" "your_service_task_definitions" {
 
 ## Lambda Services
 
-All lambda services should be registered to the existing Lambda Node in Consul. 
+Due to the "temporary" nature of lambdas, the Consul Registrator cannot sense them in the same way as ECS services. As a workaround, we created a specific Node for lambdas in Consul's registry.
 
-To do so, you will need to:
+All lambda services must be registered to the Lambda Node. To do so, you will need to:
 
 * retrieve the `consul-client` remote state.
 * define the lambda node address, your service tags, and health check within a `consul_service` resource.
@@ -117,7 +121,7 @@ resource "consul_service" "lambda-test" {
 ```
 
 > [!IMPORTANT]
-> Make sure to define `node`, `tags`, and `check` exactly as shown in the example above, or your lambda will fail to register.
+> Make sure to define `node`, `tags`, and `check` exactly as shown in the example above, or your lambda will fail to register. The other attributes in the example can be edited to fit your use case.
 
 ## Verify that your registration was successful
 
@@ -125,7 +129,7 @@ Make a request to the Consul server for your service:
 
 `https://discovery.dev.rev.io/<your_service_name>/<env>/<endpoint>`
 
-You must include `env` in the url path as seen above. This will take on the value dev, qa, or prod.
+You must include `env` in the url path as seen above. This will take on the values: dev, qa, or prod.
 
 > [!TIP]
 > An easy way to verify your service's registration is to make a request to a health check endpoint that simply returns a 200 OK JSON response and success message.

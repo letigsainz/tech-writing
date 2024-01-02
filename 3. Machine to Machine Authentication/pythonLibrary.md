@@ -6,6 +6,8 @@ Machine to machine (M2M) authentication allows services to communicate with one 
 
 `m2m-auth` is a comprehensive library used to authenticate calls between internal services and API’s, creating a secure and trusted network of clients.
 
+<img src="images/diagram.png">
+
 > [!IMPORTANT]
 > If you need to use M2M authentication with an existing Python2 service, please use [this]() library instead.
 

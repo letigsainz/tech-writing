@@ -8,9 +8,11 @@ Services deployed as ECS instances are immediately added to Consul’s catalog o
 
 The Registrator monitors the Docker daemon for container stop and start events and handles service registration with Consul, using the container names and exposed ports as the service information (which you will explicitly provide, as shown below).
 
-Lambdas, on the other hand, will be manually added to Consul’s registry, as seen below.
+Lambdas, on the other hand, will be manually added to Consul’s registry.
 
 Fabio is a load balancer and reverse proxy that configures itself with data from Consul. It does so by listening for new Consul registrations and editing its routing table to maintain parity. Fabio handles request distribution when a given service is comprised of more than one instance.
+
+<img src="images/diagram.png">
 
 > [!IMPORTANT]
 > At this time, service discovery is only available for *internal* services.

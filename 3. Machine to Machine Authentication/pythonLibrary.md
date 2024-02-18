@@ -2,9 +2,12 @@
 
 ## Overview
 
-Machine to machine (M2M) authentication allows services to communicate with one another in a secure way. In the same way that a system should determine the authenticity of a user before allowing access, it must also authorize the client. In this case, the client (or clients) refers to our services. 
+Machine to machine (M2M) authentication allows services to communicate with each other in a secure manner. 
 
-`m2m-auth` is a comprehensive library used to authenticate calls between internal services and API’s, creating a secure and trusted network of clients.
+In the same way that a system should determine the authenticity of a user before allowing access to its resources, it must also authorize the client. In this case, the client refers to a given service.
+
+m2m-auth is a comprehensive library used for M2M authentication across our internal services and API’s.
+
 
 <img src="images/diagram.png">
 
@@ -13,11 +16,11 @@ Machine to machine (M2M) authentication allows services to communicate with one 
 
 ## Installation
 
-To install the latest version of `m2m-auth`, include the following code snippet at the very bottom of your project’s `requirements.txt` file. For more information on the library's versions, see the [changelog]().
+To install the latest version of `m2m-auth`, include the following code snippet at the very bottom of your project’s `requirements.txt` file. For other versions, see the [changelog]().
 
 ```
---extra-index-url https://nexus.rev.com/repo/m2m-auth/packages
-https://nexus.rev.com/repo/m2m-auth/packages/m2m-auth/1.0.8.tar.gz
+--extra-index-url https://nexus.com/repo/m2m-auth/packages
+https://nexus.com/repo/m2m-auth/packages/m2m-auth/1.0.8.tar.gz
 ```
 
 Then run:
